@@ -64,7 +64,8 @@ public class DataConnector extends AbstractAuditableEntity {
         HIVE,
         KAFKA,
         AVRO,
-        CUSTOM
+        CUSTOM,
+        JDBC
     }
 
     @NotNull
@@ -89,7 +90,7 @@ public class DataConnector extends AbstractAuditableEntity {
     private String defaultDataUnit = "365000d";
 
     @JsonIgnore
-    @Column(length = 20480)
+    @Column(length = 20480,columnDefinition = "TEXT")
     private String config;
 
     @Transient

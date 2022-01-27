@@ -3,12 +3,15 @@
   "className": "org.apache.griffin.measure.Application",
   "queue": "default",
   "numExecutors": 2,
-  "executorCores": 1,
-  "driverMemory": "1g",
-  "executorMemory": "1g",
+  "executorCores": 2,
+  "driverMemory": "2g",
+  "executorMemory": "4g",
   "conf": {
     "spark.yarn.dist.files": "hdfs:///home/spark_conf/hive-site.xml"
   },
   "files": [
+  ],
+  "jars": [
+    "hdfs:///jdbc/clickhouse-native-jdbc-2.5.4.jar"
   ]
 }
